@@ -3,7 +3,7 @@ development:
   encoding: unicode
   database: mrdeolho_development
   pool: 5
-  #username: postgres
+  username: runeroniek 
   #password:
   host: localhost
 
@@ -12,16 +12,8 @@ test:
   encoding: unicode
   database: mrdeolho_test
   pool: 5
-  #username: postgres
+  username: runeroniek 
   #password:
   min_messages: WARNING
   host: localhost
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: mrdeolho_production
-  pool: 5
-  username: postgres
-  password:
-  host: localhost
