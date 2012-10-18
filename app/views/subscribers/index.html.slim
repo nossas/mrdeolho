@@ -1,2 +1,16 @@
-h1 Subscribers#index
-p Find me in app/views/subscribers/index.html.slim
+.text
+  h1 A cidade é nossa e o fiscal é você!
+  = image_tag "text.png"
+.about
+  .sub
+    | Os vereadores eleitos já começam a trabalhar em janeiro e nós temos pouco tempo para preparar uma grande surpresa para eles! 
+    | Por isso o MeuRio elegeu você para construir com a gente a primeira plataforma colaborativa de fiscalização do legislativo do Rio! 
+    | Saiba mais!
+
+.form
+  .sub
+    span Insira seu e-mail abaixo e seja um dos primeiros a participar dessa iniciativa:
+    = form_for Subscriber.new do |f|
+      = f.text_field :email, placeholder: "Insira seu e-mail"
+      = f.submit "Cadastre-me"
+

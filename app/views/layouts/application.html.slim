@@ -7,9 +7,11 @@ html
     = yield(:meta_tags)
     = csrf_meta_tag
     = javascript_include_tag "application"
-  body
+  body class=controller.controller_name id=controller.action_name
     = initjs_tag
     = render 'layouts/flash', flash: flash if flash.present?
     = render 'layouts/header'
-    = yield
+    section.content
+      .row
+        = yield
     = render 'layouts/footer'

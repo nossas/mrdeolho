@@ -1,4 +1,4 @@
 class SubscribersController < ApplicationController
-  def index
-  end
+  inherit_resources
+  actions :index, :new, :create
 end
