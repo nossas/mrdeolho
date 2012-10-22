@@ -21,7 +21,7 @@
   .sub
     span Insira seu e-mail abaixo e seja um dos primeiros a participar dessa iniciativa:
     = form_for Subscriber.new do |f|
-      = f.text_field :email, placeholder: "Insira seu e-mail"
+      = f.text_field :email, placeholder: "Insira seu e-mail", "ng-required" => ""   
       = f.submit "Cadastre-me"
 .video
   .sub
