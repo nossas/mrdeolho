@@ -24,8 +24,8 @@ gem 'heroku'
 gem 'jquery-rails'
 gem "slim"
 gem "slim-rails"
-gem 'initjs'
 gem 'rack-google-analytics'
+gem "angular-rails"
 
 # Tools
 #gem 'simple_form'

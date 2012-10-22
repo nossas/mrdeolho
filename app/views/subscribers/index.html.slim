@@ -1,3 +1,12 @@
+= content_for :meta_tags do
+  meta name="description" content="Os vereadores eleitos já começam a trabalhar em janeiro e nós temos pouco tempo para preparar uma grande surpresa para eles!"
+  meta name="keywords"    content="de olho no legislativo, meu rio, cariocas, crowdsourcing, acompanhamento, camara dos vereadores"
+  meta name="author"      content="MeuRio - contato@meurio.org.br"
+
+= content_for :og do
+  meta property="og:title" content="Acabei de me inscrever para ficar #de olho na cidade com o Meu Rio. Clique aqui e saiba como participar" 
+  meta property="og:description" content="o MeuRio elegeu você para construir com a gente a primeira plataforma colaborativa de fiscalização do legislativo do Rio!"
+  meta property="og:video" content="http://www.youtube.com/embed/K0XQ1JCf3e0?autoplay=1&wmode=transparent&rel=0"
 .text
   h1 A cidade é nossa e o fiscal é você!
   = image_tag "text.png"
@@ -14,4 +23,8 @@
     = form_for Subscriber.new do |f|
       = f.text_field :email, placeholder: "Insira seu e-mail"
       = f.submit "Cadastre-me"
+.video
+  .sub
+    = link_to image_tag("thumb_video.jpg"), "{{video}}", :"ng-click" => "openVideo(video)"
+
 

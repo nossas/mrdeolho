@@ -29,6 +29,9 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.3.2)
+    angular-rails (0.0.12)
+      coffee-script (~> 2.2.0)
+      rails
     arel (3.0.2)
     awesome_print (1.1.0)
     builder (3.0.4)
@@ -85,8 +88,6 @@ GEM
     inherited_resources (1.3.1)
       has_scope (~> 0.5.0)
       responders (~> 0.6)
-    initjs (0.1.2)
-      rails (~> 3.1)
     jasmine (1.2.1)
       jasmine-core (>= 1.2.0)
       rack (~> 1.0)
@@ -211,6 +212,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angular-rails
   awesome_print
   capybara
   coffee-rails (~> 3.2.2)
@@ -222,7 +224,6 @@ DEPENDENCIES
   foreigner
   heroku
   inherited_resources
-  initjs
   jasmine
   jquery-rails
   machinist (>= 2.0)
