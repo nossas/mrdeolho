@@ -7,7 +7,6 @@ html
     = yield(:meta_tags)
     = yield(:og)
     = csrf_meta_tag
-    = javascript_include_tag "application"
   body class=controller.controller_name id=controller.action_name ng-app="" ng-controller=controller.controller_name.camelize
     = render 'layouts/flash', flash: flash if flash.present?
     = render 'layouts/header'
@@ -16,3 +15,4 @@ html
         = yield
     = render 'layouts/footer'
     #fb-root
+    = javascript_include_tag "application"
