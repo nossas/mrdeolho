@@ -10,6 +10,12 @@
 .text
   h1 A cidade é nossa e o fiscal é você!
   = image_tag "text.png"
+
+.social
+  .fb-like data-href="http://deolho.meurio.org.br" data-send="false" data-width="80" data-show-faces="false" data-layout="button_count"
+  a href="https://twitter.com/share" data-url="http://deolho.meurio.org.br" class="twitter-share-button" data-text="Acabei de me inscrever para ficar #deolho na cidade com o Meu Rio. Clique aqui e saiba como participar!" data-via="MeuRio" data-lang="pt"
+    | Tweetar
+
 .about
   .sub
     | Os vereadores eleitos já começam a trabalhar em janeiro e nós temos pouco tempo para preparar uma grande surpresa para eles! 
@@ -20,11 +26,23 @@
 .form
   .sub
     span Insira seu e-mail abaixo e seja um dos primeiros a participar dessa iniciativa:
-    = form_for Subscriber.new do |f|
-      = f.text_field :email, placeholder: "Insira seu e-mail", "ng-required" => ""   
+    = form_for Subscriber.new, html: { :"ng-submit" => 'subscribe()' } do |f|
+      = f.text_field :email, placeholder: "Insira seu e-mail", :"ng-model" => "email", :"ng-required" => ""   
       = f.submit "Cadastre-me"
 .video
   .sub
     = link_to image_tag("thumb_video.jpg"), "{{video}}", :"ng-click" => "openVideo(video)"
 
+.hidden
+  #subscribe_success
+    h2 Obrigado por se cadastrar 
+    p Dummy text goes here
+.hidden
+  #subscribe_failure
+    h2 Ops, parece que algo de errado aconteceu!
 
+    h4 Pode ser o seguinte:
+    ol
+      li Cheque se o seu e-mail está escrito corretamente!
+      li O campo de email não pode estar em branco!
+      li Você já se cadastrou e está tentando novamente?

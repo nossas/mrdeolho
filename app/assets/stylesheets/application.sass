@@ -61,6 +61,8 @@ a
   &:hover
     border: none
 
+.hidden
+  display: none
 
 .flash
   width: 99%
@@ -86,12 +88,7 @@ body.subscribers
       +grid(6)
       img
         margin-bottom: 0
-    .social
-      margin-top: 1em
-      iframe
-        margin-top: .3em
-      +grid(6)
-      +last
+
   &#index, &#create
     section.content
       background: image-url('subscribers_index_bg.jpg') no-repeat center top
@@ -108,6 +105,14 @@ body.subscribers
         background: $green
         +grid-subcolumn(7,6)
         +grid-prefix(1)
+    .social
+      margin-top: 4em
+      +grid(4)
+      +grid-prefix(1)
+      +last
+      .fb-like
+        top: -3px !important
+        right: 20px
     .about, .form, .video
       margin-top: 2em
       color: white
