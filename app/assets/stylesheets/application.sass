@@ -158,22 +158,22 @@ body.subscribers
           background: $green
           +border-radius(0 0 6px 6px)
           font-weight: 100
-
-    &#create
-      h1
-        display: block 
-        color: white
-        font-size: 1.1em
+    #subscribe_success, #subscribe_failure
+      h2 
+        color: $green
+        font-size: 1.4em
+        text-transform: uppercase
+        padding: .5em 0
+      h2, h4, ol,p
+        margin: 1em .2em
+      li
+        margin: .5em 1em
+        list-style-type: disc
+      h4
         font-weight: bold
-        letter-spacing: 1px
-        padding: .2em 1em
-        line-height: 100% 
-      section.content
-        .video
-          margin-top: 2em
-        .social
-          +grid(2)
-          +last
+    #subscribe_failure
+      h2
+        color: red
   footer
     margin-top: 2em
     nav
