@@ -11,15 +11,13 @@ function Subscribers($scope, $element, $http) {
     event.preventDefault();
     $http.post('/subscribers', { email: $scope.email })
     .success(function(data) {
-      $.colorbox({href: "#subscribe_success", inline: true, width: "50%", height: "50%"});
+      $.colorbox({href: "#subscribe_success", inline: true, width: "50%", height: "60%"});
     })
     .error(function(data) {
-      $.colorbox({href: "#subscribe_failure", inline: true, width: "50%", height: "50%"}); 
+      $.colorbox({href: "#subscribe_success", inline: true, width: "50%", height: "60%"}); 
     });
 
   };
-
-
 
 }
 

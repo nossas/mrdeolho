@@ -28,7 +28,7 @@
   .sub
     span Insira seu e-mail abaixo e seja um dos primeiros a participar dessa iniciativa:
     = form_for Subscriber.new, html: { :"ng-submit" => 'subscribe()' } do |f|
-      = f.text_field :email, placeholder: "Insira seu e-mail", :"ng-model" => "email", :"ng-required" => ""   
+      = f.text_field :email, placeholder: "Insira seu e-mail", :"ng-model" => "email"
       = f.submit "Cadastre-me"
 .video
   .sub
@@ -37,12 +37,18 @@
 .hidden
   #subscribe_success
     h2 Obrigado por se cadastrar :) 
-    p Obrigado por participar. 
-    p Quanto mais cariocas estiverem fiscalizando conosco, melhor. Espalhe este vídeo para todo mundo e chame mais fiscais para o projeto!
-    .fb-like data-href="http://deolho.meurio.org.br" data-send="false" data-width="80" data-show-faces="false" data-layout="box_count"
-    a href="https://twitter.com/share" data-url="http://deolho.meurio.org.br" data-count="vertical" class="twitter-share-button" data-text="Acabei de me inscrever para ficar #deolho na cidade com o Meu Rio. Clique aqui e saiba como participar!" data-via="MeuRio" data-lang="pt"
-      | Tweetar
-    .g-plusone data-size="tall"
+    p 
+      | Obrigado por participar. 
+      | Quanto mais cariocas estiverem fiscalizando conosco, melhor. 
+    p
+      | Espalhe este vídeo para todo mundo e chame mais fiscais para o projeto!
+    .video
+      = image_tag "thumb_video.jpg"
+    .like
+      .fb-like data-href="http://deolho.meurio.org.br" data-send="false" data-width="80" data-show-faces="false" data-layout="box_count"
+      a href="https://twitter.com/share" data-url="http://deolho.meurio.org.br" data-count="vertical" class="twitter-share-button" data-text="Acabei de me inscrever para ficar #deolho na cidade com o Meu Rio. Clique aqui e saiba como participar!" data-via="MeuRio" data-lang="en"
+        | Tweet 
+      .g-plusone data-size="tall"
     
 
 
@@ -56,3 +62,13 @@
       li Cheque se o seu e-mail está escrito corretamente!
       li O campo de email não pode estar em branco!
       li Você já se cadastrou e está tentando novamente?
+.hidden
+  #know_more
+    p
+      | Graças à sua participação, no último ano vimos que é possível pressionar os Deputados e Vereadores do Rio para conseguir as mudanças que os cariocas querem. Descobrimos também que quando ninguém está de olho as casas legislativas podem virar uma verdadeira farra. 
+    p
+      | Estamos aqui hoje para dizer que essa farra tem data para acabar: 15 de fevereiro de 2013, o primeiro dia do novo mandato. Pois é, nós dissemos que essas eleições teriam consequências.  
+    p
+      | Mas para isso precisaremos mais uma vez da sua participação. Temos apenas quatro meses para nos unirmos na criação da primeira plataforma online de fiscalização do legislativo do Rio. Vamos acompanhar e fiscalizar todos os legisladores, de todos os partidos, o tempo inteiro. E as informações que teremos serão espalhadas para todos os eleitores cariocas saberem exatamente em quem estão votando.
+    p
+      | Nossa corrida já começou. E precisamos de você do nosso lado. Insira seu email abaixo e nós te enviaremos mais informações. 

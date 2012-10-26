@@ -85,10 +85,23 @@ body.subscribers
     background: white
     +box-shadow(0 2px 6px gray)
     .logo
-      +grid(6)
+      +grid(7)
+      +grid-suffix(1)
       img
         margin-bottom: 0
-
+    .counter
+      +grid(4)
+      +last
+      background: image-url('counter.png') right 10px no-repeat
+      font-size: 4em
+      color: white
+      height: 80px
+      p
+        margin-right: 1.8em
+        font-size: .5em
+        margin-top: .8em
+        text-align: right
+        letter-spacing: 7px
   &#index, &#create
     section.content
       background: image-url('subscribers_index_bg.jpg') no-repeat center top
@@ -171,6 +184,19 @@ body.subscribers
         list-style-type: disc
       h4
         font-weight: bold
+      .video
+        +grid(4)
+      .social
+        +grid(6)
+        +last
+      iframe.twitter-share-button
+        top: .2em
+        left: .1em
+        right: .3em
+        position: relative
+      .g-plusone
+        margin-top: .3em
+
     #subscribe_failure
       h2
         color: red

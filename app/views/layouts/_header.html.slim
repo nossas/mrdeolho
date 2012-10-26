@@ -2,3 +2,7 @@ header
   .row
     .logo= image_tag "mr.png"
 
+
+
+    .counter
+      p= Subscriber.count.to_s.rjust(3, '0')
