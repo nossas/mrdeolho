@@ -93,11 +93,13 @@ body.subscribers
         margin-bottom: 0
     .image
       +grid(4)
+      +mobile-hide
       img
         float: right
         margin-top: 1em
     .counter
       +grid(3)
+      +mobile-hide
       +last
       background: image-url('counter.png') right 10px no-repeat
       font-size: 4em
