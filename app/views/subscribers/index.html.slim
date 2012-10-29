@@ -22,14 +22,14 @@
     | Os vereadores eleitos já começam a trabalhar em fevereiro e nós temos pouco tempo para preparar uma grande surpresa para eles! 
     p
       | Por isso <strong>MeuRio</strong> elegeu você para construir com a gente a primeira plataforma colaborativa de fiscalização do legislativo do Rio! 
-      = link_to "Saiba mais!", ""
+      = link_to "Saiba mais!", "#/", class: "know_more"
 
 .form
   .sub
     span Insira seu e-mail abaixo e seja um dos primeiros a participar dessa iniciativa:
     = form_for Subscriber.new, html: { :"ng-submit" => 'subscribe()' } do |f|
-      = f.text_field :email, placeholder: "Insira seu e-mail", :"ng-model" => "email"
-      = f.submit "Cadastre-me"
+      = f.text_field :email, placeholder: "email", :"ng-model" => "email"
+      = f.submit "Participar"
 .video
   .sub
     = link_to image_tag("thumb_video.jpg"), "http://www.youtube.com/embed/K0XQ1JCf3e0?autoplay=1&wmode=transparent&rel=0"
@@ -39,14 +39,13 @@
     h2 Obrigado por se cadastrar :) 
     p 
       | Obrigado por participar!
-    span
-      | Quanto mais cariocas estiverem fiscalizando conosco, melhor! 
     p
-      | Espalhe este vídeo para todo mundo e chame mais fiscais para o projeto!
+      | Agora compartilhe este vídeo e chame mais fiscais para o projeto! 
     .video
       = image_tag "thumb_video.jpg"
     .like
-      h3 Compartilha aí!
+      h3 
+        | Compartilha aí!
       .fb-like data-href="http://deolho.meurio.org.br" data-send="false" data-width="90" data-show-faces="false" data-layout="box_count"
       a href="https://twitter.com/share" data-url="http://deolho.meurio.org.br" data-count="vertical" class="twitter-share-button" data-text="Acabei de me inscrever para ficar #deolho na cidade com o Meu Rio. Clique aqui e saiba como participar!" data-via="MeuRio" data-lang="en"
         | Tweet 
@@ -57,20 +56,32 @@
 
 .hidden
   #subscribe_failure
-    h2 Ops, parece que algo de errado aconteceu!
-
-    h4 Pode ser o seguinte:
+    h2 
+      | Ih, parece que deu ruim!
     ol
-      li Cheque se o seu e-mail está escrito corretamente!
-      li O campo de email não pode estar em branco!
-      li Você já se cadastrou e está tentando novamente?
+      li 
+        | Verifique se você inseriu seu email.
+      li 
+        | Verifique se o seu email está escrito corretamente.      
+      li 
+        | Você já cadastrou esse email e está tentando cadastrar novamente?
+
 .hidden
   #know_more
+    h2 Saiba mais
     p
-      | Graças à sua participação, no último ano vimos que é possível pressionar os Deputados e Vereadores do Rio para conseguir as mudanças que os cariocas querem. Descobrimos também que quando ninguém está de olho as casas legislativas podem virar uma verdadeira farra. 
+      | Graças à sua participação, no último ano vimos que é possível pressionar os Deputados e Vereadores do Rio para conseguir as mudanças que os cariocas querem. 
+    p
+      | Descobrimos também que quando ninguém está de olho as casas legislativas podem virar uma verdadeira farra. 
     p
       | Estamos aqui hoje para dizer que essa farra tem data para acabar: 15 de fevereiro de 2013, o primeiro dia do novo mandato. Pois é, nós dissemos que essas eleições teriam consequências.  
     p
-      | Mas para isso precisaremos mais uma vez da sua participação. Temos apenas quatro meses para nos unirmos na criação da primeira plataforma online de fiscalização do legislativo do Rio. Vamos acompanhar e fiscalizar todos os legisladores, de todos os partidos, o tempo inteiro. E as informações que teremos serão espalhadas para todos os eleitores cariocas saberem exatamente em quem estão votando.
+      | Mas para isso precisaremos mais uma vez da sua participação. 
     p
-      | Nossa corrida já começou. E precisamos de você do nosso lado. Insira seu email abaixo e nós te enviaremos mais informações. 
+      | Temos apenas quatro meses para nos unirmos na criação da primeira plataforma online de fiscalização do legislativo do Rio. Vamos acompanhar e fiscalizar todos os legisladores, de todos os partidos, o tempo inteiro. 
+      br
+      | E as informações que teremos serão espalhadas para todos os eleitores cariocas saberem exatamente em quem estão votando.
+    p
+      | Nossa corrida já começou. E precisamos de você do nosso lado. 
+    p
+      | Cadastre seu email e nós te enviaremos mais informações!

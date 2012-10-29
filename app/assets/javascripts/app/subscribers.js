@@ -11,18 +11,22 @@ function Subscribers($scope, $element, $http) {
     $.colorbox({ iframe: true, href: $(event.currentTarget).prop('href') , width: "55%", height: "65%" });
   };
 
-
+  $scope.showBox = function(href) {
+    event.preventDefault();
+    $.colorbox({href: href, inline: true, width: "50%", height: "60%"});
+  }
   
   $($element).on('click', '.video .sub a', $scope.openVideo);
+  $($element).on('click', 'a.know_more', $scope.showBox('#know_more'));
 
   $scope.subscribe = function(){
     event.preventDefault();
     $http.post('/subscribers', { email: $scope.email })
     .success(function(data) {
-      $.colorbox({href: "#subscribe_success", inline: true, width: "50%", height: "60%"});
+      $scope.showBox("#subscribe_success");
     })
     .error(function(data) {
-      $.colorbox({href: "#subscribe_failure", inline: true, width: "50%", height: "60%"}); 
+      $scope.showBox("#subscribe_failure");
     });
 
   };
