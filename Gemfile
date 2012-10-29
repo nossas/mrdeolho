@@ -56,7 +56,7 @@ group :development, :test do
   gem "ffaker"
   gem 'database_cleaner'
   gem "capybara"
-  gem "jasmine"
+  gem "jasmine-rails"
   gem "pry"
   gem 'awesome_print'
 end

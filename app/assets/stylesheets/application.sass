@@ -60,6 +60,8 @@ a
   border-bottom: 1px solid white
   &:hover
     border: none
+h1, h2, h3 
+  font-weight: bold
 
 .hidden
   display: none
@@ -85,12 +87,17 @@ body.subscribers
     background: white
     +box-shadow(0 2px 6px gray)
     .logo
-      +grid(7)
+      +grid(4)
       +grid-suffix(1)
       img
         margin-bottom: 0
-    .counter
+    .image
       +grid(4)
+      img
+        float: right
+        margin-top: 1em
+    .counter
+      +grid(3)
       +last
       background: image-url('counter.png') right 10px no-repeat
       font-size: 4em

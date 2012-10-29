@@ -1,11 +1,19 @@
 function Subscribers($scope, $element, $http) {
 
+
+
   $scope.video = "http://www.youtube.com/embed/K0XQ1JCf3e0?autoplay=1&wmode=transparent&rel=0"
   $scope.form  = $element.find('form');
-  $scope.openVideo = function(videoUrl) {
+
+
+  $scope.openVideo = function(event) {
     event.preventDefault();
-    $.colorbox({ iframe: true, href: videoUrl, width: "55%", height: "65%" });
+    $.colorbox({ iframe: true, href: $(event.currentTarget).prop('href') , width: "55%", height: "65%" });
   };
+
+
+  
+  $($element).on('click', '.video .sub a', $scope.openVideo);
 
   $scope.subscribe = function(){
     event.preventDefault();
@@ -14,7 +22,7 @@ function Subscribers($scope, $element, $http) {
       $.colorbox({href: "#subscribe_success", inline: true, width: "50%", height: "60%"});
     })
     .error(function(data) {
-      $.colorbox({href: "#subscribe_success", inline: true, width: "50%", height: "60%"}); 
+      $.colorbox({href: "#subscribe_failure", inline: true, width: "50%", height: "60%"}); 
     });
 
   };

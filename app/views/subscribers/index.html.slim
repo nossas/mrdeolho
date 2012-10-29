@@ -32,20 +32,22 @@
       = f.submit "Cadastre-me"
 .video
   .sub
-    = link_to image_tag("thumb_video.jpg"), "{{video}}", :"ng-click" => "openVideo(video)"
+    = link_to image_tag("thumb_video.jpg"), "http://www.youtube.com/embed/K0XQ1JCf3e0?autoplay=1&wmode=transparent&rel=0"
 
 .hidden
   #subscribe_success
     h2 Obrigado por se cadastrar :) 
     p 
-      | Obrigado por participar. 
-      | Quanto mais cariocas estiverem fiscalizando conosco, melhor. 
+      | Obrigado por participar!
+    span
+      | Quanto mais cariocas estiverem fiscalizando conosco, melhor! 
     p
       | Espalhe este vídeo para todo mundo e chame mais fiscais para o projeto!
     .video
       = image_tag "thumb_video.jpg"
     .like
-      .fb-like data-href="http://deolho.meurio.org.br" data-send="false" data-width="80" data-show-faces="false" data-layout="box_count"
+      h3 Compartilha aí!
+      .fb-like data-href="http://deolho.meurio.org.br" data-send="false" data-width="90" data-show-faces="false" data-layout="box_count"
       a href="https://twitter.com/share" data-url="http://deolho.meurio.org.br" data-count="vertical" class="twitter-share-button" data-text="Acabei de me inscrever para ficar #deolho na cidade com o Meu Rio. Clique aqui e saiba como participar!" data-via="MeuRio" data-lang="en"
         | Tweet 
       .g-plusone data-size="tall"
