@@ -17,7 +17,9 @@ function Subscribers($scope, $element, $http) {
   }
   
   $($element).on('click', '.video .sub a', $scope.openVideo);
-  $($element).on('click', 'a.know_more', $scope.showBox('#know_more'));
+  $($element).on('click', '.about a.know_more', function(event) {
+    $scope.showBox('#know_more')
+  });
 
   $scope.subscribe = function(){
     event.preventDefault();
